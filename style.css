@@ -18,13 +18,95 @@
     background-color: #1992d4;
     display: flex;
     flex-direction: column;
+    gap: 3%;
     
 
 }
 
-.dashBoard>div {
+
+.dashBoard>div  {
     border: white solid;
+
 }
+
+.dashBoard>div:nth-child(2)>ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.dashBoard>div:nth-child(2)>ul>li{
+    color: white;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.dashBoard>div:nth-child(2)>ul>li:nth-child(1)::before{
+    content: url('home-1391-svgrepo-com.svg');
+    padding-right: 10px;
+   vertical-align: middle;
+  
+}
+
+
+
+.dashBoard>div:nth-child(2)>ul>li:nth-child(2)::before{
+    content: url('profile-svgrepo-com.svg');
+    padding-right: 10px;
+    vertical-align: middle;
+    
+   
+  
+}
+
+.dashBoard>div:nth-child(2)>ul>li:nth-child(3)::before{
+    content: url('messages-3-svgrepo-com.svg');
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.dashBoard>div:nth-child(2)>ul>li:nth-child(4)::before{
+    content: url('history-round-svgrepo-com.svg');
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.dashBoard>div:nth-child(2)>ul>li:nth-child(5)::before{
+    content: url('tasks-list-svgrepo-com.svg');
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.dashBoard>div:nth-child(2)>ul>li:nth-child(6)::before{
+    content: url('people-community-svgrepo-com.svg');
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+
+.dashBoard>div:nth-child(1){
+    height: max(5%, 50px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: black solid;
+    padding-top: 3%;
+
+}
+
+.svgDashboard {
+    width: 50px;
+    height: 50px;
+}
+
+.DashboardLogo {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    
+}
+
 .header {
     display: grid;
     grid-row: span 1;
