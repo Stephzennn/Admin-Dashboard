@@ -162,7 +162,95 @@
     grid-column: 2/3;
     grid-row: 2/-1;
     border: orange solid;
+    background-color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
 }
+
+.projects>* {
+    border: black solid;
+}
+.projects>div{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    }
+
+.card {
+    height: 200px;
+    width: 400px;
+    border-radius: 12px;
+    /*border: blue solid;*/
+    border: 0%;
+    background-color: #f0b429;
+    display: grid;
+    grid-template-columns: 2fr 98fr;
+    grid-template-rows: 1fr;
+    box-shadow: black;
+    box-shadow: 30%;
+
+}
+
+.card>div {
+    grid-column: 2/-1;
+    background-color: white;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 3%;
+
+}
+
+.card>div>p {
+    min-width: 90%;
+    min-height: 50%;
+    border: black solid;
+}
+
+.card>div>div  {
+    min-width: 90%;
+    min-height: 10%;
+
+    text-align: end;
+    
+
+}
+
+.card>div>div>ul{
+    margin-top: 0%;
+    padding-top: 0%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2%;
+    padding-right: 3%;
+}
+
+.card>div>div>ul>li:nth-child(1){
+    
+    content: url('add-to-favourites-svgrepo-com.svg');
+    vertical-align: middle;
+
+}
+
+
+
+
+.card>div>div>ul>li:nth-child(2){
+    
+    content: url('view-filled-svgrepo-com.svg');
+    vertical-align: middle;
+}
+
+
+
+.card>div>div>ul>li:nth-child(3){
+    
+    content: url('share-network-multimedia-svgrepo-com.svg');
+    vertical-align: middle;
+}
+/*333333*/
+
 .announcement {
     grid-row: 2/3;
     grid-column: 3/-1;
