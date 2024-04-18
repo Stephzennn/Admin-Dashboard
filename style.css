@@ -165,21 +165,41 @@
     background-color: #e2e8f0;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-weight: bold;
+    
+    
 }
 
 .projects>* {
-    border: black solid;
+    padding-left: 2%;
+    
+
 }
+
+
+
+
 .projects>div{
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 10px;
+    justify-content: flex-start;
+    gap: 2%;
+    padding: 2%;
+    margin-top: 0%;
+    padding-top: 0%;
+    
+    flex-wrap: wrap;
     }
 
 .card {
-    height: 200px;
-    width: 400px;
+    max-height: 200px;
+    max-width: 50%;
+    flex-basis: 200px;
+    flex-shrink: 0; /* Add this line */
+    min-width: 40%; /* Add this line */
+    min-height: 15%; /* Add this line */
+    flex-grow: 1;
     border-radius: 12px;
     /*border: blue solid;*/
     border: 0%;
@@ -188,33 +208,85 @@
     grid-template-columns: 2fr 98fr;
     grid-template-rows: 1fr;
     box-shadow: black;
-    box-shadow: 30%;
+
+    box-shadow: 100%;
+    overflow:hidden;
+    margin-bottom: 30px;
 
 }
 
-.card>div {
+
+
+.card>.cardUnder1 {
     grid-column: 2/-1;
+    grid-row: 1/  -1;
     background-color: white;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     padding: 3%;
-
+    
+    display: grid;
+    grid-template-rows: 3fr 0.5fr;
+    grid-template-columns: 1fr;
+    
 }
 
-.card>div>p {
+.card>div>.bigBox {
     min-width: 90%;
-    min-height: 50%;
-    border: black solid;
+    
+   
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    grid-row: 1/ span 1;
+
 }
 
+
+.card>div>.bigBox>.bigBoxp {
+    text-align: start;
+    align-items: start;
+    padding-top: 0%;
+    margin-top: 3%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    font-size: 20px;
+    font-weight: bold;
+    overflow: hidden;
+    
+    
+}
+
+
+.card>div>.bigBox>.bigBoxdiv {
+    text-align: start;
+    align-items: start;
+    padding-top: 0%;
+    margin-top: 2%;
+    color: #636363;
+    font-size: 17px;
+    max-height: 100px;
+    max-width: 90%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 85%;
+    overflow: hidden;
+}
 .card>div>div  {
-    min-width: 90%;
-    min-height: 10%;
+    
 
     text-align: end;
     
 
 }
+
+.card>.cardUnder1>.listCard  {
+    grid-row: 2/-1;
+    
+    text-align: end;
+    
+
+}
+
 
 .card>div>div>ul{
     margin-top: 0%;
@@ -222,7 +294,7 @@
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    gap: 2%;
+    gap: 10%;
     padding-right: 3%;
 }
 
@@ -255,12 +327,75 @@
     grid-row: 2/3;
     grid-column: 3/-1;
     border:brown solid;
+    background-color: #e2e8f0;
+    gap: 2%;
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 1fr 11fr;
+    grid-column: 1fr;
+    
 }
+
+.announcementTitle {
+    border: yellow solid;
+    font-size: 20px;
+    font-weight: bold;
+    grid-row: 1/2;
+    align-self: center;
+}
+
+.announcementBox {
+    grid-row: 2/-1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row: 1fr;
+    min-height: 100px;
+    padding: max(40px, 5%);
+    background-color: white;
+    border-radius: 2.5%;
+    margin: 2%;
+    
+}
+
+.Box1,.Box2 ,.Box3{
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr ;
+
+}
+
+
+.line {
+    height: 0%;
+    width: 100%;
+    border-top: 1px solid black; 
+    margin-top: 5%;
+}
+.Box1P, .Box2P, .Box3P {
+    grid-row: 1/2;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    align-self: center;
+}
+
+
+.Box1Div, .Box2Div, .Box3Div{
+    grid-row: 2/-1;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    overflow: hidden;
+    
+}
+
+
 
 .trending{
     grid-column: 3/-1;
     grid-row: 3/-1;
     border: blue solid;
+    background-color: #e2e8f0;
 }
 
 .searchBar {
