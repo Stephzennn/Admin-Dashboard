@@ -1,10 +1,11 @@
 .GrandContainer {
     display: grid;
     width:100%;
-    min-height: 800px;
+    max-height: 2000px;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr ;
-    border: black solid;
+    grid-template-rows: 1fr 5fr auto;
+    background-color: #e2e8f0;
+    /*border: black solid;*/
     
 }
 
@@ -13,8 +14,8 @@
 .dashBoard {
     grid-row: 1/-1;
     grid-column: span 1;
-    min-height: 300px;
-    border: red solid;
+    
+    /*border: red solid;*/
     background-color: #1992d4;
     display: flex;
     flex-direction: column;
@@ -24,11 +25,11 @@
 }
 
 
-.dashBoard>div  {
+/*.dashBoard>div  {
     border: white solid;
 
 }
-
+*/
 .dashBoard>div:nth-child(2)>ul {
     display: flex;
     flex-direction: column;
@@ -131,7 +132,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: black solid;
+    /*border: black solid;*/
     padding-top: 3%;
 
 }
@@ -152,16 +153,18 @@
     display: grid;
     grid-row: span 1;
     grid-column: 2/-1;
-    border: green solid;
+    /*border: green solid;*/
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 5fr 1fr 1fr 1fr;
     overflow: auto;
+    padding: 0%;
+    background-color: white;
 }
 
 .projects {
     grid-column: 2/3;
     grid-row: 2/-1;
-    border: orange solid;
+    /*border: orange solid;*/
     background-color: #e2e8f0;
     display: flex;
     flex-direction: column;
@@ -322,38 +325,49 @@
     vertical-align: middle;
 }
 /*333333*/
-
+.rightEdge{
+    grid-row: 2/3;
+    display: flex;
+    
+    flex-direction: column;
+}
 .announcement {
     grid-row: 2/3;
     grid-column: 3/-1;
-    border:brown solid;
+   
     background-color: #e2e8f0;
-    gap: 2%;
-    padding: 2%;
-    display: grid;
-    grid-template-rows: 1fr 11fr;
-    grid-column: 1fr;
+    
+    padding-right: 3%;
+    padding-bottom: 6%;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    
     
 }
 
 .announcementTitle {
-    border: yellow solid;
+    /*border: yellow solid;*/
     font-size: 20px;
     font-weight: bold;
-    grid-row: 1/2;
-    align-self: center;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin-bottom: 7%;
+    margin-top: 7%;
 }
 
 .announcementBox {
-    grid-row: 2/-1;
+    
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-row: 1fr;
-    min-height: 100px;
+    
     padding: max(40px, 5%);
     background-color: white;
     border-radius: 2.5%;
-    margin: 2%;
+   
     
 }
 
@@ -361,6 +375,17 @@
     display: grid;
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr ;
+
+}
+.trending .Box1,.trending .Box2 ,.trending .Box3{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr ;
+    
+    column-gap: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    overflow: hidden;
 
 }
 
@@ -377,6 +402,8 @@
     margin-bottom: 0%;
     margin-top: 0%;
     align-self: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -386,6 +413,7 @@
     margin-bottom: 0%;
     margin-top: 0%;
     overflow: hidden;
+    max-height: 90%;
     
 }
 
@@ -394,15 +422,18 @@
 .trending{
     grid-column: 3/-1;
     grid-row: 3/-1;
-    border: blue solid;
+    
     background-color: #e2e8f0;
+    padding-right: 3%;
+    padding-bottom: 10%;
+
 }
 
 .searchBar {
     display: flex;
     grid-column: span 1;
     grid-row: span 1;
-    border: blue solid;
+    /*border: blue solid;*/
     justify-content: flex-start;
     padding-left: 2%;
     align-items: center;
@@ -422,7 +453,8 @@
     padding: 0%;
     background-color: white;
     border: 0px;
-    margin-right: 15px;
+    
+    margin-left: 0.5%;
     align-items: end;
 }
 
@@ -434,28 +466,35 @@
 .profileName {
     grid-column: span 1;
     grid-row: 2/3;
-    border:red solid;
+    
+    /*border:red solid;*/
     display: flex;
     flex-direction:row;
     gap: 15px;
     padding: 0%;
+    margin: 0%;
+    
     
 }
 
-.profileName>div {
+/*.profileName>div {
     border: black solid;
 }
+*/
 .profileText {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 50px;
+    width: 50px;
 }
 .profilePic {
     border-radius: 50%;
-    width: 75px;
-    height: 75px;
-    overflow: auto;
-    margin: 20px;
+    
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    margin-left: 2%;
     border: 0px;
     background-color: #e2e8f0;
 }
@@ -467,8 +506,9 @@
     display: flex;
     justify-content: center;
     align-items: end;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    margin: 0%;
 }
 .buttonUpload {
     grid-column: 3/ span 1;
@@ -476,8 +516,9 @@
     display: flex;
     justify-content: center;
     align-items: end;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    margin: 0%;
 }
 .buttonShare {
     grid-column: 4/ span 1;
@@ -485,8 +526,9 @@
     display: flex;
     justify-content: center;
     align-items: end;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    margin: 0%;
 }
 
 .buttonNew>button {
@@ -529,36 +571,53 @@
     border-radius: 25px;
     background-color: #e2e8f0;
     border: 0px;
+    margin: 0%;
 }
 .svgSearch {
     height: 100%;
+    
     width: 100%;
+
 }
 
 .profile2 {
+    margin: 0%;
     grid-column: 2/-1;
     grid-row: 1/2;
-    border: yellow solid;
+    /*border: yellow solid;*/
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: max(3%,15px);
 }
 
-.profile2>.profilePic {
+.profile2>.profilePic, .trending .profilePic {
+    grid-column: span 1;
+    grid-row: span 1;
     width: 50px;
     height: 50px;
+    margin: 0%;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+    justify-self: center;
 }
 
-.profile2>.profileName {
+.profile2>.profileName, .trending .profileName {
+    grid-column: 2/-1;
+    grid-row: span 1;
     min-width: max(40%, 50px);
     height: 50px;
     justify-content: flex-start;
     align-items: center;
     font-size: 15px;
     font-weight: bold;
+    margin: 0%;
+    
+    align-self: self-start;
 }
 .svgBell {
     height: 25px;
     width: 25px;
+    margin: 0%;
 }
